@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-size: 1rem;
+}
+
+.main {
+    background-image: url(imgs/nature.jpg);
+    background-size: cover;
+    height: 100%;
+
+}
+
+.block {
+    /* background-color: greenyellow; */
+    background-image: url(imgs/sunchik.png);
+    background-size: cover;
+    /* border: 8px dashed black; */
+    padding: 50px;
+    width: 50px;
+    top: calc(100% - 300px);
+    left: .625rem;
+    top: 0;
+    position: absolute;
+    animation: moveSun 15s infinite linear 0s;
+}
+
+.block:hover {
+    transform: rotate(75deg);
+}
+
+.block:active {
+    transform: skew(15deg, 15deg);
+    transform: translate(50px);
+}
+
+@keyframes moveSun {
+    0% {
+        top: 0%;
+        left: 0%;
+        /* background-color: red; */
+    }
+
+    33% {
+        top:0%;
+        left: 30%;
+        /* top: calc(100% - 167px);
+        left: 0; */
+        /* background-color: goldenrod; */
+        border-radius: 0;
+        transform: scale(1);
+    }
+
+    66% {
+        top:0%;
+        left: 80%;
+        /* top: calc(100% - 167px);
+        left: calc(100% - 167px); */
+        /* background-color: blue; */
+        border-radius: 50%;
+        transform: scale(2);
+    }
+
+    100% {
+        top: 0%;
+        left: 0%;
+        /* background-color: red; */
+    }
+}
+
+.item {
+    background-image: url(imgs/car.png);
+    background-size: contain;
+    top: 50px;
+    height: 55%;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    position: sticky;
+    animation: moveCar 10s infinite ease-in-out 0s;
+}
+
+.item:hover {
+    transform: scale(1.5) ;
+}
+
+@keyframes moveCar {
+    0% {
+        top: 98%;
+        left: 90%;
+        transform: rotateZ(2deg);
+    }
+
+    33% {
+        top: 95%;
+        left: 50%;
+        transform: translate3d(37px,100px,100px);
+    }
+
+    66% {
+        top: 95%;
+        left: 20%;
+        transform: rotate3d(1,1,1,24deg);
+    }
+
+    100% {
+        top: 90%;
+        left: 0%;
+        transform: rotateY(35deg);
+    }
+}
+
+.secondary__item {
+    background: url(imgs/shrek.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 25%;
+    animation: moveShrek 2s infinite ease-in-out 0s;
+}
+
+@keyframes moveShrek {
+    0% {
+        top: 90%;
+        left: 5%;
+        transform: skewY(36deg);
+    }
+
+    44% {
+        top: 90%;
+        left: 5%;
+        transform: skewY(10deg);
+    }
+
+    100% {
+        top: 90%;
+        left: 5%;
+        transform: skewY(42deg);
+    }
+}
